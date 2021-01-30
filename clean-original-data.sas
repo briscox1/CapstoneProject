@@ -61,14 +61,6 @@ proc corr data=Billboard_with_hit spearman rank plots(maxpoints=none)=matrix(his
 	var &dataset2_without_popularity; with spotify_track_popularity;
 run;
 
-proc sgscatter data=Billboard_with_hit;
-matrix spotify_track_explicit--time_signature/ diagonal=(histogram kernel);
-run; quit;
-
-proc sgscatter data=billboard_with_hit;
-	plot spotify_track_popularity * danceability;
-run; quit;
-
 proc sql;
 	select name into :varNamesLogistic separated by ' '
 	from _contents2_

@@ -1,4 +1,25 @@
-* view contents of original file;
+*contents of uploaded datset;
+proc contents data=mysaslib.capstone order=varnum;
+	ods select position;
+	title 'Original Variables in dataset obtained from kaggle.com';
+run; quit;
+
+* rename variables to match second dataset;
+data capstone2;
+	set mysaslib.capstone (rename=(duration_ms=spotify_track_duration_ms explicit=spotify_track_explicit
+						   artists=performer name=song popularity=spotify_track_popularity));
+run; quit;
+
+proc contents data=capstone2 order=varnum;
+	ods select position;
+	title 'Variables in dataset obtained from kaggle.com after renaming variables';
+run; quit;
+
+proc means data=capstone2 n nmiss mean min max sum;
+	title 'Descriptive statistics of dataset obtained from kaggle.com';
+run; quit;
+
+* view contents of original merged file;
 proc contents data=mysaslib.merged order=varnum;
 	ods select position;
 	title 'Variables in original dataset';
