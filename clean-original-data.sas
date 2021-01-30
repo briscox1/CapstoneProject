@@ -1,6 +1,6 @@
 %include '/folders/myfolders/sasuser.v94/CapstoneProject/KW_MC.sas';
 %include '/folders/myfolders/sasuser.v94/CapstoneProject/remove-multicollinearity.sas';
-%include 
+%include '/folders/myfolders/sasuser.v94/CapstoneProject/load-data.sas';
 
 
 *Create value formats;

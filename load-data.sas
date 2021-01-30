@@ -8,7 +8,7 @@ if week_position = 1 then hit = 1;
 run; quit;
 
 data Billboard_with_hit;
-	set compressSongId;
+	set Billboard_CompressSongId;
 if compressSongId in ("(Cant Live Without Your) Love And AffectionNelson","(Everything I Do) I Do It For YouBryan Adams","(Hey Wont You Play) Another Somebody Done Somebody Wrong SongB.J. Thomas",
 "(I Cant Get No) SatisfactionThe Rolling Stones","(I Just) Died In Your ArmsCutting Crew","(Ive Had) The Time Of My LifeBill Medley & Jennifer Warnes","(Just Like) Starting OverJohn Lennon",
 "(Love Is) Thicker Than WaterAndy Gibb","(Shake, Shake, Shake) Shake Your BootyKC And The Sunshine Band","(Sittin On) The Dock Of The BayOtis Redding","(They Long To Be) Close To YouCarpenters","(Youre My) Soul And InspirationThe Righteous Brothers",
