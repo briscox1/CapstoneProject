@@ -1,5 +1,11 @@
 * view contents of original file;
 proc contents data=mysaslib.merged order=varnum;
+	ods select position;
+	title 'Variables in original dataset';
+run; quit;
+
+proc means data=mysaslib.merged n nmiss mean std min max sum;
+	title 'Descriptive Statistics of Original Dataset';
 run; quit;
   
 data merged1;
@@ -184,7 +190,7 @@ if compressSongId in ("(Cant Live Without Your) Love And AffectionNelson","(Ever
 else hit = 0;
 run; quit;
 
-* created a dataset containing only acoustic characteristics, popularity, and hit target variables;
+* create a dataset containing only acoustic characteristics, popularity, and hit target variables;
 data merged3;
 	set merged2 (keep=songID spotify_track_explicit spotify_track_duration_ms
 				 spotify_track_popularity danceability energy key loudness 
@@ -192,3 +198,11 @@ data merged3;
 				 tempo time_signature hit);
 run; quit;
 
+proc contents data=merged3 order=varnum;
+	ods select position;
+	title 'Variables in cleaned dataset';
+run; quit;
+
+proc means data=merged3 n nmiss min max std sum;
+	title 'Descritpive statistics in cleaned datset';
+run; quit;
