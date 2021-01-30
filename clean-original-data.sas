@@ -2,7 +2,6 @@
 %include '/folders/myfolders/sasuser.v94/CapstoneProject/remove-multicollinearity.sas';
 %include '/folders/myfolders/sasuser.v94/CapstoneProject/load-data.sas';
 
-
 *Create value formats;
 proc format library=mysaslib;
 	value modeFmt     0 = "minor"
@@ -28,10 +27,6 @@ proc contents data=mysaslib.capstone order=varnum out=_contents_;
 	ods select position;
 run; quit;
 
-proc contents data=mysaslib.merged2 order=varnum out=_contents2_;
-	ods select position;
-run; quit;
-
 * remove char. variables including artist, id, name, and real_date;
 * remove popularity (target variables);
 proc sql;
@@ -41,13 +36,38 @@ proc sql;
     	and   type ^= 2;
 quit;
 
+proc contents data=Billboard_with_hit order=varnum out=_contents2_;
+	ods select position;
+run; quit;
+
+proc contents data=acousticAttributesBillboard order=varnum;
+run; quit;
+
+proc means data=acousticAttributesBillboard n nmiss mean std min max sum;
+run; quit;
+
+proc print data=acousticAttributesBillboard;
+where spotify_track_popularity = .;
+
 * names for the regression on popularity for the 2nd data set;
 proc sql;
-	select name into :varNames2 separated by ' '
+	select name into :Dataset2_without_popularity separated by ' '
 	from _contents2_
-	where name ^= ('popularity')
+	where name ^= ('spotify_track_popularity')
 	and type ^= 2;
 quit;
+
+proc corr data=Billboard_with_hit spearman rank plots(maxpoints=none)=matrix(histogram);
+	var &dataset2_without_popularity; with spotify_track_popularity;
+run;
+
+proc sgscatter data=Billboard_with_hit;
+matrix spotify_track_explicit--time_signature/ diagonal=(histogram kernel);
+run; quit;
+
+proc sgscatter data=billboard_with_hit;
+	plot spotify_track_popularity * danceability;
+run; quit;
 
 proc sql;
 	select name into :varNamesLogistic separated by ' '

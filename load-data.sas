@@ -1,14 +1,23 @@
-/* remove single and double quotes from song titles and
-   add them to a field called compressSongId */
-data Billboard_CompressSongId;
+* view contents of original file;
+proc contents data=mysaslib.merged order=varnum;
+run; quit;
+  
+data merged1;
 	set mysaslib.merged;
+	* remove quotes and double quotes from song titles;
 	compressSongId = compress(songId, "'""");
-if week_position = 1 then hit = 1;
-	else hit = 0;
+	* if the song made it to the week 1 position, mark the song as a hit;
+	if week_position = 1 then hit = 1;
+		else hit = 0;
+	* delete records with missing values;
+	if spotify_track_popularity = . then delete;
+	* delete records where the data contains nothing but zeros;
+	if spotify_track_explicit -- time_signature = 0 then delete;
 run; quit;
 
-data Billboard_with_hit;
-	set Billboard_CompressSongId;
+* add hit per songID;
+data merged2;
+	set merged1;
 if compressSongId in ("(Cant Live Without Your) Love And AffectionNelson","(Everything I Do) I Do It For YouBryan Adams","(Hey Wont You Play) Another Somebody Done Somebody Wrong SongB.J. Thomas",
 "(I Cant Get No) SatisfactionThe Rolling Stones","(I Just) Died In Your ArmsCutting Crew","(Ive Had) The Time Of My LifeBill Medley & Jennifer Warnes","(Just Like) Starting OverJohn Lennon",
 "(Love Is) Thicker Than WaterAndy Gibb","(Shake, Shake, Shake) Shake Your BootyKC And The Sunshine Band","(Sittin On) The Dock Of The BayOtis Redding","(They Long To Be) Close To YouCarpenters","(Youre My) Soul And InspirationThe Righteous Brothers",
@@ -175,4 +184,11 @@ if compressSongId in ("(Cant Live Without Your) Love And AffectionNelson","(Ever
 else hit = 0;
 run; quit;
 
+* created a dataset containing only acoustic characteristics, popularity, and hit target variables;
+data merged3;
+	set merged2 (keep=songID spotify_track_explicit spotify_track_duration_ms
+				 spotify_track_popularity danceability energy key loudness 
+				 mode speechiness acousticness instrumentalness liveness valence
+				 tempo time_signature hit);
+run; quit;
 
