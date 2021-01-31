@@ -22,11 +22,18 @@ run; quit;
 * view contents of original merged file;
 proc contents data=mysaslib.merged order=varnum;
 	ods select position;
-	title 'Variables in original dataset';
+	title 'Original Variables In the Merged Dataset Obtained From data.world.com';
 run; quit;
 
 proc means data=mysaslib.merged n nmiss mean std min max sum;
-	title 'Descriptive Statistics of Original Dataset';
+	title 'Descriptive Statistics of Merged Dataset Obtained From data.world.com';
+run; quit;
+
+proc sql;
+	select count(*)
+	from mysaslib.merged
+	where spotify_track_explicit -- time_signature = 0;
+	title 'Count of tracks with statistics set to zero';
 run; quit;
   
 data merged1;
@@ -211,6 +218,12 @@ if compressSongId in ("(Cant Live Without Your) Love And AffectionNelson","(Ever
 else hit = 0;
 run; quit;
 
+proc tabulate data=merged2;
+	var weekID;
+	tables weekID, (min median max)*f=date9.;
+	title 'Min and Max Dates In Cleaned Dataset';
+run; quit;
+
 * create a dataset containing only acoustic characteristics, popularity, and hit target variables;
 data merged3;
 	set merged2 (keep=songID spotify_track_explicit spotify_track_duration_ms
@@ -227,3 +240,41 @@ run; quit;
 proc means data=merged3 n nmiss min max std sum;
 	title 'Descritpive statistics in cleaned datset';
 run; quit;
+
+proc freq data=merged3;
+	title 'Count of hits vs. non-hits';
+	table hit;
+run; quit;
+
+* separate singles and duplicates into separate databases;
+proc sort data=merged3 nodupkey dupout=remaining_merged_dups out=unique_merged;
+	by songId;
+run;
+
+proc sql;
+	title 'Verify counts of de-duplicated datasets';
+	select 'Originial dataset count: ', count(*)
+	from merged3;
+			
+	select 'Count of duplicate records:', count(*)
+	from remaining_merged_dups;
+	
+	select 'Count of unique records: ', count(*)
+	from unique_merged;
+
+* get hit vs. non-hit count on de-duplicated dataset;
+proc freq data=unique_merged;
+	title 'Count of hits vs. non-hits on the de-duplicated dataset';
+	table hit;
+run; quit;
+
+* confirm the count of duplicates in the un-duplicated dataset;
+proc freq data=unique_merged;
+	table songId / out=freqout noprint;
+run; quit;
+
+proc freq data=freqout;
+	table count;
+run; quit;
+
+
