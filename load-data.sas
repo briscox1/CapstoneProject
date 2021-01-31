@@ -15,8 +15,17 @@ proc contents data=capstone2 order=varnum;
 	title 'Variables in dataset obtained from kaggle.com after renaming variables';
 run; quit;
 
-proc means data=capstone2 n nmiss mean min max sum;
+proc contents data=capstone2(keep=_numeric_) noprint out=names(keep=name);
+run; quit;
+
+proc sql noprint;
+	select nliteral(name) into :alphanames separated by ' '
+	from names;
+run; quit;
+
+proc means data=capstone2 maxdec=2 n nmiss min max sum;
 	title 'Descriptive statistics of dataset obtained from kaggle.com';
+	var &alphanames;
 run; quit;
 
 * view contents of original merged file;
@@ -26,8 +35,9 @@ proc contents data=mysaslib.merged order=varnum;
 run; quit;
 
 proc means data=mysaslib.merged n nmiss mean std min max sum;
-	title 'Descriptive Statistics of Merged Dataset Obtained From data.world.com';
+	title 'Descriptive statistics of merged dataset obtained from data.world.com';
 run; quit;
+
 
 proc sql;
 	title 'Count of tracks with statistics set to zero';
@@ -47,6 +57,7 @@ data merged1;
 	if spotify_track_popularity = . then delete;
 	* delete records where the data contains nothing but zeros;
 	if spotify_track_explicit -- time_signature = 0 then delete;
+	label hit = "0 = non-hit, 1 = hit";
 run; quit;
 
 * add hit per songID;
@@ -278,8 +289,30 @@ proc freq data=freqout;
 	table count;
 run; quit;
 
-proc means data=unique_merged n nmiss min max sum;
-	title 'Descriptive statistics for de-duplicated, cleaned dataset';
+proc freq data=unique_merged;
+	table songID / out = freqout noprint;
+	where danceability -- tempo = 0;
 run; quit;
 
+proc freq data=freqout;
+	table count;
+	title 'Count of further missing values';
+run; quit;
 
+data unique_merged2;
+	set unique_merged;
+	if danceability -- tempo = 0 then delete;
+run; quit;
+
+proc contents data=unique_merged2(keep=_numeric_) noprint out=names(keep=name);
+run; quit;
+
+proc sql noprint;
+	select nliteral(name) into :alphanames separated by ' '
+	from names;
+run; quit;
+
+proc means data=unique_merged2 maxdec=2 n nmiss min max sum;
+	title 'Descriptive statistics of de-duplicated, cleaned dataset obtained from data.world.com';
+	var &alphanames;
+run; quit;
