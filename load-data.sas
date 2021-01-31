@@ -5,9 +5,13 @@ proc contents data=mysaslib.capstone order=varnum;
 run; quit;
 
 * rename variables to match second dataset;
+options fmtsearch=(mysaslib);
 data capstone2;
 	set mysaslib.capstone (rename=(duration_ms=spotify_track_duration_ms explicit=spotify_track_explicit
 						   artists=performer name=song popularity=spotify_track_popularity));
+format 	spotify_track_explicit ExplicitFmt.
+		key  keyFmt.
+		mode modeFmt.;
 run; quit;
 
 proc contents data=capstone2 order=varnum;
@@ -316,3 +320,10 @@ proc means data=unique_merged2 maxdec=2 n nmiss min max sum;
 	title 'Descriptive statistics of de-duplicated, cleaned dataset obtained from data.world.com';
 	var &alphanames;
 run; quit;
+
+* get hit vs. non-hit count on de-duplicated dataset;
+proc freq data=unique_merged2;
+	title 'Count of hits vs. non-hits in the de-duplicated, cleaned dataset';
+	table hit;
+run; quit;
+
