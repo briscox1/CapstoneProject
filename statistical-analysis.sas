@@ -1,3 +1,24 @@
+%include '/folders/myfolders/sasuser.v94/CapstoneProject/load-data.sas';
+
+*Create value formats;
+proc format library=mysaslib;
+	value modeFmt     0 = "minor"
+				      1 = "major";
+	value keyFmt      0 = "C"
+				      1	= "C#/Db"
+				      2 = "D"
+				      3 = "Eb"
+				      4 = "E"
+				      5 = "F"
+				      6 = "F#"
+				      7 = "G"
+				      8 = "G#/Ab"
+				      9 = "A"
+				     10 = "Bb"
+				     11 = "B";
+	value explicitFmt 0 = "No Explicit Content"
+					  1 = "Explicit Content";
+run; quit;
 ods trace off;
 
 proc contents data=capstone2 order=varnum out=_contents_ noprint;
