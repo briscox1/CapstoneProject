@@ -30,10 +30,10 @@ proc means data=mysaslib.merged n nmiss mean std min max sum;
 run; quit;
 
 proc sql;
+	title 'Count of tracks with statistics set to zero';
 	select count(*)
 	from mysaslib.merged
 	where spotify_track_explicit -- time_signature = 0;
-	title 'Count of tracks with statistics set to zero';
 run; quit;
   
 data merged1;
@@ -242,7 +242,7 @@ proc means data=merged3 n nmiss min max std sum;
 run; quit;
 
 proc freq data=merged3;
-	title 'Count of hits vs. non-hits';
+	title 'Count of hits vs. non-hits in duplicated dataset';
 	table hit;
 run; quit;
 
@@ -264,7 +264,7 @@ proc sql;
 
 * get hit vs. non-hit count on de-duplicated dataset;
 proc freq data=unique_merged;
-	title 'Count of hits vs. non-hits on the de-duplicated dataset';
+	title 'Count of hits vs. non-hits in the de-duplicated dataset';
 	table hit;
 run; quit;
 
@@ -274,7 +274,12 @@ proc freq data=unique_merged;
 run; quit;
 
 proc freq data=freqout;
+	title 'Verify de-duplicated dataset contains only unique values';
 	table count;
+run; quit;
+
+proc means data=unique_merged n nmiss min max sum;
+	title 'Descriptive statistics for de-duplicated, cleaned dataset';
 run; quit;
 
 
