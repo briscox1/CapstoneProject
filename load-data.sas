@@ -27,10 +27,15 @@ proc sql noprint;
 	from names;
 run; quit;
 
-proc means data=capstone2 maxdec=2 n nmiss min max sum;
+proc means data=capstone2 maxdec=2 n nmiss mean min max sum;
 	title 'Descriptive statistics of dataset obtained from kaggle.com';
 	var &alphanames;
 run; quit;
+
+proc sql;
+	title 'Count of unique performers in dataset obtained from kaggle.com';
+	select 'Number of unique performers:', count(distinct performer)
+	from capstone2;
 
 * view contents of original merged file;
 proc contents data=mysaslib.merged order=varnum;
@@ -306,6 +311,9 @@ run; quit;
 data unique_merged2;
 	set unique_merged;
 	if danceability -- tempo = 0 then delete;
+	Format  spotify_track_explicit ExplicitFmt.
+			key  keyFmt.
+			mode modeFmt.;
 run; quit;
 
 proc contents data=unique_merged2(keep=_numeric_) noprint out=names(keep=name);
