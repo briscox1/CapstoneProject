@@ -1,0 +1,3937 @@
+<!DOCTYPE html>
+<html class="ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>Results: linear-regression-dataset1.sas</title>
+<style>
+/*<![CDATA[*/
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c section > table, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c section > pre, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c div > table,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c div > pre, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c article > table, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c article > pre,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j section > table, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j section > pre, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j div > table,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j div > pre, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j article > table, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j article > pre,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c p.note, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c p.warning, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c p.error, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c p.fatal,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j p.note, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j p.warning, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j p.error, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j p.fatal,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.c > table.layoutcontainer, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.l table, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.l pre, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.l p.note,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.l p.warning, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.l p.error, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.l p.fatal { margin-left: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.c table, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.c pre, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.c p.note,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.c p.warning, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.c p.error, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.r table, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.r pre, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.r p.note,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.r table, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.r pre, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.r p.note,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.r p.warning, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.r p.error, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion.r p.fatal { margin-right: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f article, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f aside, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f details, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f figcaption, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f figure, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f footer, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f header, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f hgroup, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f nav, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f section { display: block }
+html.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f { font-size: 100% }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body { margin: 1em; font-size: 13px; line-height: 1.231 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f ul, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f ol { margin: 1em 0; padding: 0 0 0 40px }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f dd { margin: 0 0 0 40px }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f nav ul, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f img { border: 0; vertical-align: middle }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f svg:not(:root) { overflow: hidden }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f figure { margin: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f table { border-collapse: collapse; border-spacing: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutcontainer { border-collapse: separate; border-spacing: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f p { margin-top: 0; text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f h1.heading1 { text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f h2.heading2 { text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f h3.heading3 { text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f h4.heading4 { text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f h5.heading5 { text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f h6.heading6 { text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f span { text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f table { margin-bottom: 1em }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f td, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f th { text-align: left; padding: 3px 6px; vertical-align: top }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f td[class$="fixed"], .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f th[class$="fixed"] { white-space: pre }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f section, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f article { padding-top: 1px; padding-bottom: 8px }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .stacked-value { text-align: left; display: block }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .stacked-cell > .stacked-value, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f td.data > td.data, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f th.data > td.data, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f th.data > th.data, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f td.data > th.data, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f th.header > th.header { border: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .stacked-cell > div.data { border-width: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > p { margin: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .batch { display: table }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .toc { display: none }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .proc_note_group, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .proc_title_group { margin-bottom: 1em }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f p.proctitle { margin: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f p.note, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f p.warning, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f p.error, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f p.fatal { display: table }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .notebanner, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .warnbanner, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .errorbanner, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .fatalbanner,
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .notecontent, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .warncontent, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .errorcontent, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .fatalcontent { display: table-cell; padding: 0.5em }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .notebanner, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .warnbanner, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .errorbanner, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .fatalbanner { padding-right: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body > div > ol li { text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .c { text-align: center }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .r { text-align: right }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .l { text-align: left }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .j { text-align: justify }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .d { text-align: right }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .b { vertical-align: bottom }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .m { vertical-align: middle }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .t { vertical-align: top }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .accessiblecaption {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f a:active { color: #800080 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .aftercaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    padding-top: 4pt;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .batch > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .batch > tbody, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .batch > thead, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .batch > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .batch { border: hidden; }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .batch {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .beforecaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .body {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bodydate {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bycontentfolder {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .byline {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bylinecontainer > col, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bylinecontainer > colgroup > col, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bylinecontainer > colgroup, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bylinecontainer > tr, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bylinecontainer > * > tr, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bylinecontainer > thead, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bylinecontainer > tbody, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bylinecontainer > tfoot { border: none; }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .bylinecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .caption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .cell, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .container {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .contentfolder, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .contentitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .contentproclabel, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .contentprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .contents {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .contentsdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .contenttitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .continued {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .data, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .dataemphasis {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .dataemphasisfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .dataempty {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .datafixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .datastrong {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .datastrongfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .date {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .document {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .errorbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .errorcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .errorcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .extendedpage {
+    background-color: #fafbfe;
+    border-style: solid;
+    border-width: 1pt;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .fatalbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .fatalcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .fatalcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .folderaction {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .footer {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .footeremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .footeremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .footerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .footerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .footerstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .footerstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .frame {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .graph > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .graph > tbody, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .graph > thead, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .graph > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .graph { border: hidden; }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .graph {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .header {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .headeremphasis {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .headeremphasisfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .headerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .headerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .headersandfooters {
+    background-color: #edf2f9;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .headerstrong {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .headerstrongfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .heading1, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .heading2, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .heading3, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .heading4, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .heading5, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .heading6 { font-family: Arial, Helvetica, sans-serif }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .index {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .indexaction, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .indexitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .indexprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .indextitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutcontainer, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .layoutregion {
+    border-width: 0;
+    border-spacing: 30px;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .linecontent {
+    background-color: #fafbfe;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f a:link { color: #0000ff }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list3, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list4, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list5, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list6, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list7, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list8, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .list9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem3, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem4, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem5, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem6, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem7, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem8, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .listitem9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .note {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .notebanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .notecontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .notecontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .output > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .output > tbody, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .output > thead, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .output > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .output { border: hidden; }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .output {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .pageno {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .pages {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .pagesdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .pagesitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .pagesproclabel, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .pagesprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .pagestitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .paragraph {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .parskip > col, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .parskip > colgroup > col, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .parskip > colgroup, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .parskip > tr, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .parskip > * > tr, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .parskip > thead, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .parskip > tbody, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .parskip > tfoot { border: none; }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .parskip {
+    border: none;
+    border-spacing: 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .prepage {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .proctitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .proctitlefixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowfooter {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowfooteremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowfooteremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowfooterempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowfooterfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowfooterstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowfooterstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowheader {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowheaderemphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowheaderemphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowheaderempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowheaderfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowheaderstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .rowheaderstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter10, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter2, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter3, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter4, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter5, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter6, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter7, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter8, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemfooter9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle10, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle2, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle3, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle4, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle5, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle6, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle7, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle8, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systemtitle9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > col, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > colgroup > col, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > colgroup, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > tr, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > * > tr, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > thead, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > tbody, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer > tfoot { border: none; }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .systitleandfootercontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .table > col, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .table > colgroup > col {
+    border-left: 1px solid #c1c1c1;
+    border-right: 0 solid #c1c1c1;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .table > tr, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .table > * > tr {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 0 solid #c1c1c1;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .table { border: hidden; }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .table {
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titleandnotecontainer > col, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titleandnotecontainer > colgroup > col, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titleandnotecontainer > colgroup, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titleandnotecontainer > tr, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titleandnotecontainer > * > tr, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titleandnotecontainer > thead, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titleandnotecontainer > tbody, .ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titleandnotecontainer > tfoot { border: none; }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titleandnotecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .titlesandfooters {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .usertext {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f a:visited { color: #800080 }
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .warnbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .warncontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_2dfa1de2-2a1c-483d-82f7-f2530a36da9f .warncontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="body">
+<div id="div_2dfa1de2-2a1c-483d-82f7-f2530a36da9f" class="c body">
+<h1 class="body toc">Results: linear-regression-dataset1.sas</h1>
+<section data-name="Reg" data-sec-type="proc">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Initial Regression on Popularity Using All Variables (kaggle.com ds)</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The REG Procedure</p>
+<p class="c proctitle">Model: MODEL1</p>
+<p class="c proctitle">Dependent Variable: spotify_track_popularity</p>
+</div>
+<h1 class="contentprocname toc">The Reg Procedure</h1>
+<section>
+<h1 class="contentfolder toc">MODEL1</h1>
+<section>
+<h1 class="contentfolder toc">Fit</h1>
+<section>
+<h1 class="contentfolder toc">spotify_track_popularity</h1>
+<article aria-label="Number of Observations">
+<h1 class="contentitem toc">Number of Observations</h1>
+<table class="table" style="border-spacing: 0" aria-label="Number of Observations">
+<caption aria-label="Number of Observations"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">170653</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">170653</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX1" aria-label="Analysis of Variance">
+<h1 class="contentitem toc">Analysis of Variance</h1>
+<table class="table" style="border-spacing: 0" aria-label="Analysis of Variance">
+<caption aria-label="Analysis of Variance"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">14</td>
+<td class="r data">61264021</td>
+<td class="r data">4376001</td>
+<td class="r data">37270.8</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170638</td>
+<td class="r data">20034784</td>
+<td class="r data">117.41104</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX2" aria-label="Fit Statistics">
+<h1 class="contentitem toc">Fit Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fit Statistics">
+<caption aria-label="Fit Statistics"></caption>
+<colgroup><col/><col/><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Root MSE</th>
+<td class="r data">10.83564</td>
+<th class="rowheader" scope="row">R-Square</th>
+<td class="r data">0.7536</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Dependent Mean</th>
+<td class="r data">31.43179</td>
+<th class="rowheader" scope="row">Adj R-Sq</th>
+<td class="r data">0.7535</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Coeff Var</th>
+<td class="r data">34.47349</td>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX3" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Parameter Estimates</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">t&#160;Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;|t|</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-1285.62141</td>
+<td class="r data">2.90614</td>
+<td class="r data" style="white-space: nowrap">-442.38</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-4.14059</td>
+<td class="r data">0.12163</td>
+<td class="r data" style="white-space: nowrap">-34.04</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">danceability</th>
+<th class="r data">1</th>
+<td class="r data">2.63137</td>
+<td class="r data">0.20887</td>
+<td class="r data">12.60</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">energy</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-1.57399</td>
+<td class="r data">0.21814</td>
+<td class="r data" style="white-space: nowrap">-7.22</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-4.17894</td>
+<td class="r data">0.09753</td>
+<td class="r data" style="white-space: nowrap">-42.85</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">key</th>
+<th class="r data">1</th>
+<td class="r data">0.00019455</td>
+<td class="r data">0.00752</td>
+<td class="r data">0.03</td>
+<td class="r data">0.9794</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">liveness</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-2.97916</td>
+<td class="r data">0.15728</td>
+<td class="r data" style="white-space: nowrap">-18.94</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">loudness</th>
+<th class="r data">1</th>
+<td class="r data">0.01299</td>
+<td class="r data">0.00824</td>
+<td class="r data">1.58</td>
+<td class="r data">0.1148</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">mode</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-0.20927</td>
+<td class="r data">0.05852</td>
+<td class="r data" style="white-space: nowrap">-3.58</td>
+<td class="r data">0.0003</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-7.72995</td>
+<td class="r data">0.20026</td>
+<td class="r data" style="white-space: nowrap">-38.60</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_duration_ms</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-3.50707E-7</td>
+<td class="r data" style="white-space: nowrap">2.158384E-7</td>
+<td class="r data" style="white-space: nowrap">-1.62</td>
+<td class="r data">0.1042</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<th class="r data">1</th>
+<td class="r data">0.92445</td>
+<td class="r data">0.11181</td>
+<td class="r data">8.27</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">tempo</th>
+<th class="r data">1</th>
+<td class="r data">0.00178</td>
+<td class="r data">0.00089985</td>
+<td class="r data">1.97</td>
+<td class="r data">0.0485</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<th class="r data">1</th>
+<td class="r data">0.63751</td>
+<td class="r data">0.14263</td>
+<td class="r data">4.47</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">year</th>
+<th class="r data">1</th>
+<td class="r data">0.66790</td>
+<td class="r data">0.00146</td>
+<td class="r data">458.57</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</section>
+</section>
+</section>
+<section data-name="Reg" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX4" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Regression on Popularity Using Just The Year Variable (kaggle.com ds)</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The REG Procedure</p>
+<p class="c proctitle">Model: MODEL1</p>
+<p class="c proctitle">Dependent Variable: spotify_track_popularity</p>
+</div>
+<h1 class="contentprocname toc">The Reg Procedure</h1>
+<section>
+<h1 class="contentfolder toc">MODEL1</h1>
+<section>
+<h1 class="contentfolder toc">Fit</h1>
+<section>
+<h1 class="contentfolder toc">spotify_track_popularity</h1>
+<article aria-label="Number of Observations">
+<h1 class="contentitem toc">Number of Observations</h1>
+<table class="table" style="border-spacing: 0" aria-label="Number of Observations">
+<caption aria-label="Number of Observations"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">170653</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">170653</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX5" aria-label="Analysis of Variance">
+<h1 class="contentitem toc">Analysis of Variance</h1>
+<table class="table" style="border-spacing: 0" aria-label="Analysis of Variance">
+<caption aria-label="Analysis of Variance"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">1</td>
+<td class="r data">60470557</td>
+<td class="r data">60470557</td>
+<td class="r data">495450</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170651</td>
+<td class="r data">20828248</td>
+<td class="r data">122.05172</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX6" aria-label="Fit Statistics">
+<h1 class="contentitem toc">Fit Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fit Statistics">
+<caption aria-label="Fit Statistics"></caption>
+<colgroup><col/><col/><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Root MSE</th>
+<td class="r data">11.04770</td>
+<th class="rowheader" scope="row">R-Square</th>
+<td class="r data">0.7438</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Dependent Mean</th>
+<td class="r data">31.43179</td>
+<th class="rowheader" scope="row">Adj R-Sq</th>
+<td class="r data">0.7438</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Coeff Var</th>
+<td class="r data">35.14817</td>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX7" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Parameter Estimates</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">t&#160;Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;|t|</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-1404.31286</td>
+<td class="r data">2.03993</td>
+<td class="r data" style="white-space: nowrap">-688.41</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">year</th>
+<th class="r data">1</th>
+<td class="r data">0.72630</td>
+<td class="r data">0.00103</td>
+<td class="r data">703.88</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</section>
+</section>
+</section>
+<section data-name="Reg" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX8" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">stepwise regression on popularity with year removed (kaggle.com ds)</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The REG Procedure</p>
+<p class="c proctitle">Model: MODEL1</p>
+<p class="c proctitle">Dependent Variable: spotify_track_popularity</p>
+</div>
+<h1 class="contentprocname toc">The Reg Procedure</h1>
+<section>
+<h1 class="contentfolder toc">MODEL1</h1>
+<section>
+<h1 class="contentfolder toc">Stepwise Selection Method</h1>
+<section>
+<h1 class="contentfolder toc">spotify_track_popularity</h1>
+<article aria-label="Number of Observations">
+<h1 class="contentitem toc">Number of Observations</h1>
+<table class="table" style="border-spacing: 0" aria-label="Number of Observations">
+<caption aria-label="Number of Observations"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">170653</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">170653</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="proctitle"> </p>
+</div>
+<section>
+<h1 class="contentfolder toc">Step 1</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 1</p>
+</div>
+<article id="IDX9" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable acousticness Entered: R-Square = 0.3285 and C(p) = 37630.62</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">1</td>
+<td class="r data">26707830</td>
+<td class="r data">26707830</td>
+<td class="r data">83488.5</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170651</td>
+<td class="r data">54590975</td>
+<td class="r data">319.89836</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX10" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">48.13663</td>
+<td class="r data">0.07223</td>
+<td class="r data">142084519</td>
+<td class="r data">444155</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-33.26895</td>
+<td class="r data">0.11514</td>
+<td class="r data">26707830</td>
+<td class="r data">83488.5</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 1, 1</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 2</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 2</p>
+</div>
+<article id="IDX11" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable speechiness Entered: R-Square = 0.3675 and C(p) = 25548.77</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">2</td>
+<td class="r data">29875060</td>
+<td class="r data">14937530</td>
+<td class="r data">49570.3</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170650</td>
+<td class="r data">51423745</td>
+<td class="r data">301.34044</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX12" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">50.99708</td>
+<td class="r data">0.07545</td>
+<td class="r data">137664960</td>
+<td class="r data">456842</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-33.77331</td>
+<td class="r data">0.11186</td>
+<td class="r data">27470511</td>
+<td class="r data">91161.1</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-26.49781</td>
+<td class="r data">0.25846</td>
+<td class="r data">3167230</td>
+<td class="r data">10510.5</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 1.0019, 4.0078</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 3</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 3</p>
+</div>
+<article id="IDX13" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable spotify_track_explicit Entered: R-Square = 0.3893 and C(p) = 18778.56</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">3</td>
+<td class="r data">31650085</td>
+<td class="r data">10550028</td>
+<td class="r data">36261.8</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170649</td>
+<td class="r data">49648720</td>
+<td class="r data">290.94059</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX14" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">49.66329</td>
+<td class="r data">0.07608</td>
+<td class="r data">123980617</td>
+<td class="r data">426137</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-31.55192</td>
+<td class="r data">0.11353</td>
+<td class="r data">22471201</td>
+<td class="r data">77236.4</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-35.58402</td>
+<td class="r data">0.27934</td>
+<td class="r data">4721211</td>
+<td class="r data">16227.4</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">13.15306</td>
+<td class="r data">0.16839</td>
+<td class="r data">1775025</td>
+<td class="r data">6100.99</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 1.2877, 10.707</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 4</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 4</p>
+</div>
+<article id="IDX15" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable instrumentalness Entered: R-Square = 0.4074 and C(p) = 13170.29</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">4</td>
+<td class="r data">33120559</td>
+<td class="r data">8280140</td>
+<td class="r data">29328.4</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170648</td>
+<td class="r data">48178246</td>
+<td class="r data">282.32529</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX16" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">50.19972</td>
+<td class="r data">0.07531</td>
+<td class="r data">125439481</td>
+<td class="r data">444308</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-28.88608</td>
+<td class="r data">0.11778</td>
+<td class="r data">16981837</td>
+<td class="r data">60149.9</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<td class="r data" style="white-space: nowrap">-9.98593</td>
+<td class="r data">0.13837</td>
+<td class="r data">1470474</td>
+<td class="r data">5208.44</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-37.48440</td>
+<td class="r data">0.27643</td>
+<td class="r data">5191414</td>
+<td class="r data">18388.1</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">12.91346</td>
+<td class="r data">0.16592</td>
+<td class="r data">1710260</td>
+<td class="r data">6057.77</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 1.2883, 19.337</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 5</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 5</p>
+</div>
+<article id="IDX17" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable valence Entered: R-Square = 0.4160 and C(p) = 10495.53</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">5</td>
+<td class="r data">33822149</td>
+<td class="r data">6764430</td>
+<td class="r data">24313.6</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170647</td>
+<td class="r data">47476656</td>
+<td class="r data">278.21559</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX18" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">55.00521</td>
+<td class="r data">0.12144</td>
+<td class="r data">57081704</td>
+<td class="r data">205171</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-29.75817</td>
+<td class="r data">0.11820</td>
+<td class="r data">17633668</td>
+<td class="r data">63381.3</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<td class="r data" style="white-space: nowrap">-11.01523</td>
+<td class="r data">0.13888</td>
+<td class="r data">1750261</td>
+<td class="r data">6291.02</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-36.65432</td>
+<td class="r data">0.27491</td>
+<td class="r data">4946086</td>
+<td class="r data">17777.9</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">12.11879</td>
+<td class="r data">0.16546</td>
+<td class="r data">1492467</td>
+<td class="r data">5364.43</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<td class="r data" style="white-space: nowrap">-7.96492</td>
+<td class="r data">0.15861</td>
+<td class="r data">701590</td>
+<td class="r data">2521.75</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 1.3001, 29.854</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 6</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 6</p>
+</div>
+<article id="IDX19" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable danceability Entered: R-Square = 0.4329 and C(p) = 5270.245</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">6</td>
+<td class="r data">35192243</td>
+<td class="r data">5865374</td>
+<td class="r data">21708.5</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170646</td>
+<td class="r data">46106562</td>
+<td class="r data">270.18835</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX20" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">47.37914</td>
+<td class="r data">0.16059</td>
+<td class="r data">23517484</td>
+<td class="r data">87041.1</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-28.86387</td>
+<td class="r data">0.11716</td>
+<td class="r data">16399099</td>
+<td class="r data">60695.1</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">danceability</th>
+<td class="r data">20.98930</td>
+<td class="r data">0.29475</td>
+<td class="r data">1370095</td>
+<td class="r data">5070.89</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<td class="r data" style="white-space: nowrap">-9.75356</td>
+<td class="r data">0.13800</td>
+<td class="r data">1349658</td>
+<td class="r data">4995.25</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-39.55677</td>
+<td class="r data">0.27396</td>
+<td class="r data">5632903</td>
+<td class="r data">20848.1</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">9.97916</td>
+<td class="r data">0.16580</td>
+<td class="r data">978752</td>
+<td class="r data">3622.48</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<td class="r data" style="white-space: nowrap">-15.24224</td>
+<td class="r data">0.18675</td>
+<td class="r data">1799903</td>
+<td class="r data">6661.66</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 1.7024, 49.414</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 7</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 7</p>
+</div>
+<article id="IDX21" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable energy Entered: R-Square = 0.4436 and C(p) = 1960.046</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">7</td>
+<td class="r data">36060385</td>
+<td class="r data">5151484</td>
+<td class="r data">19432.0</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170645</td>
+<td class="r data">45238420</td>
+<td class="r data">265.10253</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX22" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">37.64820</td>
+<td class="r data">0.23285</td>
+<td class="r data">6930138</td>
+<td class="r data">26141.3</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-21.78769</td>
+<td class="r data">0.16958</td>
+<td class="r data">4375930</td>
+<td class="r data">16506.6</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">danceability</th>
+<td class="r data">23.57344</td>
+<td class="r data">0.29544</td>
+<td class="r data">1687850</td>
+<td class="r data">6366.78</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">energy</th>
+<td class="r data">13.88389</td>
+<td class="r data">0.24262</td>
+<td class="r data">868142</td>
+<td class="r data">3274.74</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<td class="r data" style="white-space: nowrap">-9.40131</td>
+<td class="r data">0.13684</td>
+<td class="r data">1251394</td>
+<td class="r data">4720.42</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-37.21309</td>
+<td class="r data">0.27444</td>
+<td class="r data">4874174</td>
+<td class="r data">18386.0</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">9.58004</td>
+<td class="r data">0.16438</td>
+<td class="r data">900401</td>
+<td class="r data">3396.43</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<td class="r data" style="white-space: nowrap">-19.33605</td>
+<td class="r data">0.19833</td>
+<td class="r data">2519737</td>
+<td class="r data">9504.76</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 2.7143, 88.508</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 8</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 8</p>
+</div>
+<article id="IDX23" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable liveness Entered: R-Square = 0.4476 and C(p) = 705.0753</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">8</td>
+<td class="r data">36389842</td>
+<td class="r data">4548730</td>
+<td class="r data">17284.2</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170644</td>
+<td class="r data">44908963</td>
+<td class="r data">263.17341</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX24" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">38.91604</td>
+<td class="r data">0.23475</td>
+<td class="r data">7232229</td>
+<td class="r data">27480.9</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-21.13615</td>
+<td class="r data">0.16997</td>
+<td class="r data">4069789</td>
+<td class="r data">15464.3</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">danceability</th>
+<td class="r data">22.00126</td>
+<td class="r data">0.29769</td>
+<td class="r data">1437466</td>
+<td class="r data">5462.05</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">energy</th>
+<td class="r data">15.44936</td>
+<td class="r data">0.24575</td>
+<td class="r data">1040108</td>
+<td class="r data">3952.18</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<td class="r data" style="white-space: nowrap">-9.61506</td>
+<td class="r data">0.13647</td>
+<td class="r data">1306380</td>
+<td class="r data">4963.95</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">liveness</th>
+<td class="r data" style="white-space: nowrap">-8.29065</td>
+<td class="r data">0.23432</td>
+<td class="r data">329457</td>
+<td class="r data">1251.86</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-35.42284</td>
+<td class="r data">0.27808</td>
+<td class="r data">4270267</td>
+<td class="r data">16226.1</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">9.57837</td>
+<td class="r data">0.16378</td>
+<td class="r data">900089</td>
+<td class="r data">3420.14</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<td class="r data" style="white-space: nowrap">-19.22073</td>
+<td class="r data">0.19764</td>
+<td class="r data">2489094</td>
+<td class="r data">9458.00</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 2.8053, 111.52</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 9</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 9</p>
+</div>
+<article id="IDX25" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable loudness Entered: R-Square = 0.4488 and C(p) = 321.8946</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">9</td>
+<td class="r data">36490800</td>
+<td class="r data">4054533</td>
+<td class="r data">15440.9</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170643</td>
+<td class="r data">44808006</td>
+<td class="r data">262.58332</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX26" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">44.05867</td>
+<td class="r data">0.35181</td>
+<td class="r data">4118202</td>
+<td class="r data">15683.4</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-21.67256</td>
+<td class="r data">0.17196</td>
+<td class="r data">4170694</td>
+<td class="r data">15883.3</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">danceability</th>
+<td class="r data">20.96374</td>
+<td class="r data">0.30203</td>
+<td class="r data">1265033</td>
+<td class="r data">4817.65</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">energy</th>
+<td class="r data">11.33447</td>
+<td class="r data">0.32295</td>
+<td class="r data">323442</td>
+<td class="r data">1231.77</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<td class="r data" style="white-space: nowrap">-8.67490</td>
+<td class="r data">0.14450</td>
+<td class="r data">946318</td>
+<td class="r data">3603.88</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">liveness</th>
+<td class="r data" style="white-space: nowrap">-8.13899</td>
+<td class="r data">0.23419</td>
+<td class="r data">317168</td>
+<td class="r data">1207.88</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">loudness</th>
+<td class="r data">0.24090</td>
+<td class="r data">0.01229</td>
+<td class="r data">100958</td>
+<td class="r data">384.48</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-34.08175</td>
+<td class="r data">0.28607</td>
+<td class="r data">3727086</td>
+<td class="r data">14193.9</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">9.21754</td>
+<td class="r data">0.16463</td>
+<td class="r data">823135</td>
+<td class="r data">3134.76</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<td class="r data" style="white-space: nowrap">-18.95164</td>
+<td class="r data">0.19789</td>
+<td class="r data">2408252</td>
+<td class="r data">9171.38</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 4.8555, 175.99</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 10</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 10</p>
+</div>
+<article id="IDX27" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable tempo Entered: R-Square = 0.4498 and C(p) = 17.4570</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">10</td>
+<td class="r data">36571118</td>
+<td class="r data">3657112</td>
+<td class="r data">13952.4</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170642</td>
+<td class="r data">44727687</td>
+<td class="r data">262.11418</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX28" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">41.04111</td>
+<td class="r data">0.39149</td>
+<td class="r data">2880588</td>
+<td class="r data">10989.8</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-21.46186</td>
+<td class="r data">0.17223</td>
+<td class="r data">4070018</td>
+<td class="r data">15527.7</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">danceability</th>
+<td class="r data">21.78795</td>
+<td class="r data">0.30541</td>
+<td class="r data">1333984</td>
+<td class="r data">5089.32</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">energy</th>
+<td class="r data">11.10474</td>
+<td class="r data">0.32293</td>
+<td class="r data">309951</td>
+<td class="r data">1182.50</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<td class="r data" style="white-space: nowrap">-8.60849</td>
+<td class="r data">0.14442</td>
+<td class="r data">931241</td>
+<td class="r data">3552.81</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">liveness</th>
+<td class="r data" style="white-space: nowrap">-7.98480</td>
+<td class="r data">0.23414</td>
+<td class="r data">304832</td>
+<td class="r data">1162.97</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">loudness</th>
+<td class="r data">0.23188</td>
+<td class="r data">0.01229</td>
+<td class="r data">93374</td>
+<td class="r data">356.23</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-34.26066</td>
+<td class="r data">0.28600</td>
+<td class="r data">3761509</td>
+<td class="r data">14350.6</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">9.22585</td>
+<td class="r data">0.16449</td>
+<td class="r data">824614</td>
+<td class="r data">3146.01</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">tempo</th>
+<td class="r data">0.02350</td>
+<td class="r data">0.00134</td>
+<td class="r data">80319</td>
+<td class="r data">306.43</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<td class="r data" style="white-space: nowrap">-19.51076</td>
+<td class="r data">0.20028</td>
+<td class="r data">2487528</td>
+<td class="r data">9490.24</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 4.8636, 207.83</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 11</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 11</p>
+</div>
+<article id="IDX29" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable mode Entered: R-Square = 0.4499 and C(p) = 14.6081</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">11</td>
+<td class="r data">36572389</td>
+<td class="r data">3324763</td>
+<td class="r data">12684.7</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170641</td>
+<td class="r data">44726416</td>
+<td class="r data">262.10826</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX30" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">41.20232</td>
+<td class="r data">0.39828</td>
+<td class="r data">2805157</td>
+<td class="r data">10702.3</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-21.46048</td>
+<td class="r data">0.17223</td>
+<td class="r data">4069441</td>
+<td class="r data">15525.8</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">danceability</th>
+<td class="r data">21.75614</td>
+<td class="r data">0.30575</td>
+<td class="r data">1327120</td>
+<td class="r data">5063.25</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">energy</th>
+<td class="r data">11.07790</td>
+<td class="r data">0.32316</td>
+<td class="r data">308016</td>
+<td class="r data">1175.15</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<td class="r data" style="white-space: nowrap">-8.62669</td>
+<td class="r data">0.14466</td>
+<td class="r data">932129</td>
+<td class="r data">3556.28</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">liveness</th>
+<td class="r data" style="white-space: nowrap">-7.98062</td>
+<td class="r data">0.23415</td>
+<td class="r data">304493</td>
+<td class="r data">1161.71</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">loudness</th>
+<td class="r data">0.23233</td>
+<td class="r data">0.01229</td>
+<td class="r data">93713</td>
+<td class="r data">357.53</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">mode</th>
+<td class="r data" style="white-space: nowrap">-0.19108</td>
+<td class="r data">0.08678</td>
+<td class="r data">1270.92045</td>
+<td class="r data">4.85</td>
+<td class="r data">0.0277</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-34.27963</td>
+<td class="r data">0.28612</td>
+<td class="r data">3762262</td>
+<td class="r data">14353.8</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">9.21055</td>
+<td class="r data">0.16463</td>
+<td class="r data">820416</td>
+<td class="r data">3130.07</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">tempo</th>
+<td class="r data">0.02353</td>
+<td class="r data">0.00134</td>
+<td class="r data">80516</td>
+<td class="r data">307.19</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<td class="r data" style="white-space: nowrap">-19.49141</td>
+<td class="r data">0.20047</td>
+<td class="r data">2477829</td>
+<td class="r data">9453.46</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 4.8705, 240.05</p>
+</div>
+</section>
+<section>
+<h1 class="contentfolder toc">Step 12</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Stepwise Selection: Step 12</p>
+</div>
+<article id="IDX31" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<div class="proc_note_group">
+<p class="c proctitle">Variable spotify_track_duration_ms Entered: R-Square = 0.4499 and C(p) = 12.2683</p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">12</td>
+<td class="r data">36573527</td>
+<td class="r data">3047794</td>
+<td class="r data">11628.2</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170640</td>
+<td class="r data">44725279</td>
+<td class="r data">262.10313</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX32" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">Type&#160;II&#160;SS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">40.99903</td>
+<td class="r data">0.41005</td>
+<td class="r data">2620238</td>
+<td class="r data">9996.97</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<td class="r data" style="white-space: nowrap">-21.43194</td>
+<td class="r data">0.17277</td>
+<td class="r data">4033097</td>
+<td class="r data">15387.4</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">danceability</th>
+<td class="r data">21.76603</td>
+<td class="r data">0.30578</td>
+<td class="r data">1328007</td>
+<td class="r data">5066.74</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">energy</th>
+<td class="r data">11.05859</td>
+<td class="r data">0.32329</td>
+<td class="r data">306691</td>
+<td class="r data">1170.11</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<td class="r data" style="white-space: nowrap">-8.64673</td>
+<td class="r data">0.14498</td>
+<td class="r data">932342</td>
+<td class="r data">3557.16</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">liveness</th>
+<td class="r data" style="white-space: nowrap">-8.00448</td>
+<td class="r data">0.23442</td>
+<td class="r data">305585</td>
+<td class="r data">1165.90</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">loudness</th>
+<td class="r data">0.23266</td>
+<td class="r data">0.01229</td>
+<td class="r data">93957</td>
+<td class="r data">358.48</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">mode</th>
+<td class="r data" style="white-space: nowrap">-0.18355</td>
+<td class="r data">0.08685</td>
+<td class="r data">1170.74123</td>
+<td class="r data">4.47</td>
+<td class="r data">0.0346</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<td class="r data" style="white-space: nowrap">-34.25286</td>
+<td class="r data">0.28641</td>
+<td class="r data">3748825</td>
+<td class="r data">14302.9</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_duration_ms</th>
+<td class="r data" style="white-space: nowrap">6.717678E-7</td>
+<td class="r data" style="white-space: nowrap">3.224654E-7</td>
+<td class="r data">1137.48151</td>
+<td class="r data">4.34</td>
+<td class="r data">0.0372</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<td class="r data">9.22790</td>
+<td class="r data">0.16484</td>
+<td class="r data">821408</td>
+<td class="r data">3133.91</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">tempo</th>
+<td class="r data">0.02358</td>
+<td class="r data">0.00134</td>
+<td class="r data">80869</td>
+<td class="r data">308.54</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<td class="r data" style="white-space: nowrap">-19.42753</td>
+<td class="r data">0.20280</td>
+<td class="r data">2405324</td>
+<td class="r data">9177.01</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+</tbody>
+</table>
+</article>
+<div class="proc_note_group">
+<p class="c proctitle">Bounds on condition number: 4.8745, 275.78</p>
+</div>
+</section>
+<div class="proc_note_group">
+<p class="c proctitle">All variables left in the model are significant at the 0.0500 level.</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">No other variable met the 0.0500 significance level for entry into the model.</p>
+</div>
+<article id="IDX33" aria-label="Selection Summary">
+<h1 class="contentitem toc">Selection Summary</h1>
+<div class="proc_note_group">
+<p class="c proctitle"></p>
+<p class="c proctitle"></p>
+<p class="proctitle"></p>
+</div>
+<table class="table" style="border-spacing: 0" aria-label="Selection Summary">
+<caption aria-label="Selection Summary"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="9" scope="colgroup">Summary of Stepwise Selection</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Step</th>
+<th class="b header" scope="col">Variable<br/>Entered</th>
+<th class="b header" scope="col">Variable<br/>Removed</th>
+<th class="r b header" scope="col">Number<br/>Vars In</th>
+<th class="r b header" scope="col">Partial<br/>R-Square</th>
+<th class="r b header" scope="col">Model<br/>R-Square</th>
+<th class="r b header" scope="col">C(p)</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">acousticness</td>
+<td class="data">&#160;</td>
+<td class="r data">1</td>
+<td class="r data">0.3285</td>
+<td class="r data">0.3285</td>
+<td class="r data">37630.6</td>
+<td class="r data">83488.5</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<td class="data">speechiness</td>
+<td class="data">&#160;</td>
+<td class="r data">2</td>
+<td class="r data">0.0390</td>
+<td class="r data">0.3675</td>
+<td class="r data">25548.8</td>
+<td class="r data">10510.5</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">spotify_track_explicit</td>
+<td class="data">&#160;</td>
+<td class="r data">3</td>
+<td class="r data">0.0218</td>
+<td class="r data">0.3893</td>
+<td class="r data">18778.6</td>
+<td class="r data">6100.99</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<td class="data">instrumentalness</td>
+<td class="data">&#160;</td>
+<td class="r data">4</td>
+<td class="r data">0.0181</td>
+<td class="r data">0.4074</td>
+<td class="r data">13170.3</td>
+<td class="r data">5208.44</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">valence</td>
+<td class="data">&#160;</td>
+<td class="r data">5</td>
+<td class="r data">0.0086</td>
+<td class="r data">0.4160</td>
+<td class="r data">10495.5</td>
+<td class="r data">2521.75</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<td class="data">danceability</td>
+<td class="data">&#160;</td>
+<td class="r data">6</td>
+<td class="r data">0.0169</td>
+<td class="r data">0.4329</td>
+<td class="r data">5270.24</td>
+<td class="r data">5070.89</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<td class="data">energy</td>
+<td class="data">&#160;</td>
+<td class="r data">7</td>
+<td class="r data">0.0107</td>
+<td class="r data">0.4436</td>
+<td class="r data">1960.05</td>
+<td class="r data">3274.74</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<td class="data">liveness</td>
+<td class="data">&#160;</td>
+<td class="r data">8</td>
+<td class="r data">0.0041</td>
+<td class="r data">0.4476</td>
+<td class="r data">705.075</td>
+<td class="r data">1251.86</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">loudness</td>
+<td class="data">&#160;</td>
+<td class="r data">9</td>
+<td class="r data">0.0012</td>
+<td class="r data">0.4488</td>
+<td class="r data">321.895</td>
+<td class="r data">384.48</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<td class="data">tempo</td>
+<td class="data">&#160;</td>
+<td class="r data">10</td>
+<td class="r data">0.0010</td>
+<td class="r data">0.4498</td>
+<td class="r data">17.4570</td>
+<td class="r data">306.43</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="data">mode</td>
+<td class="data">&#160;</td>
+<td class="r data">11</td>
+<td class="r data">0.0000</td>
+<td class="r data">0.4499</td>
+<td class="r data">14.6081</td>
+<td class="r data">4.85</td>
+<td class="r data">0.0277</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<td class="data">spotify_track_duration_ms</td>
+<td class="data">&#160;</td>
+<td class="r data">12</td>
+<td class="r data">0.0000</td>
+<td class="r data">0.4499</td>
+<td class="r data">12.2683</td>
+<td class="r data">4.34</td>
+<td class="r data">0.0372</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</section>
+<hr class="pagebreak"/>
+<div id="IDX34" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">stepwise regression on popularity with year removed (kaggle.com ds)</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The REG Procedure</p>
+<p class="c proctitle">Model: MODEL1</p>
+<p class="c proctitle">Dependent Variable: spotify_track_popularity</p>
+</div>
+<section>
+<h1 class="contentfolder toc">Fit</h1>
+<section>
+<h1 class="contentfolder toc">spotify_track_popularity</h1>
+<article aria-label="Number of Observations">
+<h1 class="contentitem toc">Number of Observations</h1>
+<table class="table" style="border-spacing: 0" aria-label="Number of Observations">
+<caption aria-label="Number of Observations"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">170653</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">170653</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX35" aria-label="Analysis of Variance">
+<h1 class="contentitem toc">Analysis of Variance</h1>
+<table class="table" style="border-spacing: 0" aria-label="Analysis of Variance">
+<caption aria-label="Analysis of Variance"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">12</td>
+<td class="r data">36573527</td>
+<td class="r data">3047794</td>
+<td class="r data">11628.2</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">170640</td>
+<td class="r data">44725279</td>
+<td class="r data">262.10313</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">170652</td>
+<td class="r data">81298805</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX36" aria-label="Fit Statistics">
+<h1 class="contentitem toc">Fit Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fit Statistics">
+<caption aria-label="Fit Statistics"></caption>
+<colgroup><col/><col/><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Root MSE</th>
+<td class="r data">16.18960</td>
+<th class="rowheader" scope="row">R-Square</th>
+<td class="r data">0.4499</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Dependent Mean</th>
+<td class="r data">31.43179</td>
+<th class="rowheader" scope="row">Adj R-Sq</th>
+<td class="r data">0.4498</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Coeff Var</th>
+<td class="r data">51.50708</td>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX37" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="7" scope="colgroup">Parameter Estimates</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Parameter<br/>Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">t&#160;Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;|t|</th>
+<th class="r b header" scope="col">Variance<br/>Inflation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<th class="r data">1</th>
+<td class="r data">40.99903</td>
+<td class="r data">0.41005</td>
+<td class="r data">99.98</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">acousticness</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-21.43194</td>
+<td class="r data">0.17277</td>
+<td class="r data" style="white-space: nowrap">-124.05</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">2.74818</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">danceability</th>
+<th class="r data">1</th>
+<td class="r data">21.76603</td>
+<td class="r data">0.30578</td>
+<td class="r data">71.18</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">1.88875</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">energy</th>
+<th class="r data">1</th>
+<td class="r data">11.05859</td>
+<td class="r data">0.32329</td>
+<td class="r data">34.21</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">4.87451</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">instrumentalness</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-8.64673</td>
+<td class="r data">0.14498</td>
+<td class="r data" style="white-space: nowrap">-59.64</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">1.34476</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">liveness</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-8.00448</td>
+<td class="r data">0.23442</td>
+<td class="r data" style="white-space: nowrap">-34.15</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">1.09333</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">loudness</th>
+<th class="r data">1</th>
+<td class="r data">0.23266</td>
+<td class="r data">0.01229</td>
+<td class="r data">18.93</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">3.19186</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">mode</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-0.18355</td>
+<td class="r data">0.08685</td>
+<td class="r data" style="white-space: nowrap">-2.11</td>
+<td class="r data">0.0346</td>
+<td class="r data">1.01754</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">speechiness</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-34.25286</td>
+<td class="r data">0.28641</td>
+<td class="r data" style="white-space: nowrap">-119.59</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">1.41449</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_duration_ms</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">6.717678E-7</td>
+<td class="r data" style="white-space: nowrap">3.224654E-7</td>
+<td class="r data">2.08</td>
+<td class="r data">0.0372</td>
+<td class="r data">1.07687</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">spotify_track_explicit</th>
+<th class="r data">1</th>
+<td class="r data">9.22790</td>
+<td class="r data">0.16484</td>
+<td class="r data">55.98</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">1.36970</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">tempo</th>
+<th class="r data">1</th>
+<td class="r data">0.02358</td>
+<td class="r data">0.00134</td>
+<td class="r data">17.57</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">1.10671</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">valence</th>
+<th class="r data">1</th>
+<td class="r data" style="white-space: nowrap">-19.42753</td>
+<td class="r data">0.20280</td>
+<td class="r data" style="white-space: nowrap">-95.80</td>
+<td class="r data">&lt;.0001</td>
+<td class="r data">1.85460</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</section>
+</section>
+</section>
+<section data-name="GLMSelect" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX38" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">stepwise regression on popularity with year removed (kaggle.com ds)</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+</div>
+<h1 class="contentprocname toc">The GLMSelect Procedure</h1>
+<section>
+<h1 class="contentfolder toc">Model Building Summary</h1>
+<article aria-label="Stepwise Selection Summary">
+<h1 class="contentitem toc">Stepwise Selection Summary</h1>
+<table class="table" style="border-spacing: 0" aria-label="Stepwise Selection Summary">
+<caption aria-label="Stepwise Selection Summary"></caption>
+<colgroup><col/><col/><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="15" scope="colgroup">Stepwise Selection Summary</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Step</th>
+<th class="b header" scope="col">Effect<br/>Entered</th>
+<th class="b header" scope="col">Effect<br/>Removed</th>
+<th class="r b header" scope="col">Number<br/>Effects In</th>
+<th class="r b header" scope="col">Model<br/>R-Square</th>
+<th class="r b header" scope="col">Adjusted<br/>R-Square</th>
+<th class="r b header" scope="col">AIC</th>
+<th class="r b header" scope="col">AICC</th>
+<th class="r b header" scope="col">BIC</th>
+<th class="r b header" scope="col">CP</th>
+<th class="r b header" scope="col">SBC</th>
+<th class="r b header" scope="col">PRESS</th>
+<th class="r b header" scope="col">ASE</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th class="c b footer" colspan="15">*&#160;Optimal&#160;Value&#160;of&#160;Criterion</th>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">0</th>
+<th class="rowheader" scope="row">Intercept</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">1</td>
+<td class="r data">0.0000</td>
+<td class="r data">0.0000</td>
+<td class="r data">1222946.80</td>
+<td class="r data">1222946.80</td>
+<td class="r data">1052292.50</td>
+<td class="r data">139526.356</td>
+<td class="r data">1052301.85</td>
+<td class="r data">81299758.2</td>
+<td class="r data">476.3983</td>
+<td class="r data">0.00</td>
+<td class="r data">1.0000</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">acousticness</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">2</td>
+<td class="r data">0.3285</td>
+<td class="r data">0.3285</td>
+<td class="r data">1154984.07</td>
+<td class="r data">1154984.07</td>
+<td class="r data">984330.28</td>
+<td class="r data">37630.621</td>
+<td class="r data">984349.17</td>
+<td class="r data">54592200.8</td>
+<td class="r data">319.8946</td>
+<td class="r data">83488.5</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">speechiness</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">3</td>
+<td class="r data">0.3675</td>
+<td class="r data">0.3675</td>
+<td class="r data">1144786.39</td>
+<td class="r data">1144786.39</td>
+<td class="r data">974132.57</td>
+<td class="r data">25548.765</td>
+<td class="r data">974161.53</td>
+<td class="r data">51425458.1</td>
+<td class="r data">301.3351</td>
+<td class="r data">10510.5</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">spotify_track_explic</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">4</td>
+<td class="r data">0.3893</td>
+<td class="r data">0.3893</td>
+<td class="r data">1138793.79</td>
+<td class="r data">1138793.79</td>
+<td class="r data">968139.98</td>
+<td class="r data">18778.556</td>
+<td class="r data">968178.98</td>
+<td class="r data">49651057.6</td>
+<td class="r data">290.9338</td>
+<td class="r data">6100.99</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<th class="rowheader" scope="row">instrumentalness</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">5</td>
+<td class="r data">0.4074</td>
+<td class="r data">0.4074</td>
+<td class="r data">1133665.11</td>
+<td class="r data">1133665.11</td>
+<td class="r data">963011.38</td>
+<td class="r data">13170.293</td>
+<td class="r data">963060.34</td>
+<td class="r data">48181120.1</td>
+<td class="r data">282.3170</td>
+<td class="r data">5208.44</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<th class="rowheader" scope="row">valence</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">6</td>
+<td class="r data">0.4160</td>
+<td class="r data">0.4160</td>
+<td class="r data">1131163.72</td>
+<td class="r data">1131163.72</td>
+<td class="r data">960510.02</td>
+<td class="r data">10495.533</td>
+<td class="r data">960569.00</td>
+<td class="r data">47480045.6</td>
+<td class="r data">278.2058</td>
+<td class="r data">2521.75</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<th class="rowheader" scope="row">danceability</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">7</td>
+<td class="r data">0.4329</td>
+<td class="r data">0.4329</td>
+<td class="r data">1126168.51</td>
+<td class="r data">1126168.51</td>
+<td class="r data">955515.09</td>
+<td class="r data">5270.245</td>
+<td class="r data">955583.84</td>
+<td class="r data">46110468.8</td>
+<td class="r data">270.1773</td>
+<td class="r data">5070.89</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<th class="rowheader" scope="row">energy</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">8</td>
+<td class="r data">0.4436</td>
+<td class="r data">0.4435</td>
+<td class="r data">1122926.64</td>
+<td class="r data">1122926.65</td>
+<td class="r data">952273.46</td>
+<td class="r data">1960.046</td>
+<td class="r data">952352.02</td>
+<td class="r data">45242741.6</td>
+<td class="r data">265.0901</td>
+<td class="r data">3274.74</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<th class="rowheader" scope="row">liveness</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">9</td>
+<td class="r data">0.4476</td>
+<td class="r data">0.4476</td>
+<td class="r data">1121681.28</td>
+<td class="r data">1121681.29</td>
+<td class="r data">951028.21</td>
+<td class="r data">705.075</td>
+<td class="r data">951116.71</td>
+<td class="r data">44913759.7</td>
+<td class="r data">263.1595</td>
+<td class="r data">1251.86</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<th class="rowheader" scope="row">loudness</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">10</td>
+<td class="r data">0.4488</td>
+<td class="r data">0.4488</td>
+<td class="r data">1121299.22</td>
+<td class="r data">1121299.22</td>
+<td class="r data">950646.18</td>
+<td class="r data">321.895</td>
+<td class="r data">950744.69</td>
+<td class="r data">44813556.0</td>
+<td class="r data">262.5679</td>
+<td class="r data">384.48</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<th class="rowheader" scope="row">tempo</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">11</td>
+<td class="r data">0.4498</td>
+<td class="r data">0.4498</td>
+<td class="r data">1120995.05</td>
+<td class="r data">1120995.05</td>
+<td class="r data">950342.05</td>
+<td class="r data">17.457</td>
+<td class="r data">950450.57*</td>
+<td class="r data">44733803.5</td>
+<td class="r data">262.0973</td>
+<td class="r data">306.43</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<th class="rowheader" scope="row">mode</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">12</td>
+<td class="r data">0.4499</td>
+<td class="r data">0.4498</td>
+<td class="r data">1120992.20</td>
+<td class="r data">1120992.20</td>
+<td class="r data">950339.20</td>
+<td class="r data">14.608</td>
+<td class="r data">950457.77</td>
+<td class="r data">44733060.2</td>
+<td class="r data">262.0898</td>
+<td class="r data">4.85</td>
+<td class="r data">0.0277</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<th class="rowheader" scope="row">spotify_track_durati</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">13</td>
+<td class="r data">0.4499</td>
+<td class="r data">0.4498*</td>
+<td class="r data">1120989.86*</td>
+<td class="r data">1120989.86*</td>
+<td class="r data">950336.86*</td>
+<td class="r data">12.268*</td>
+<td class="r data">950465.47</td>
+<td class="r data">44732471.9*</td>
+<td class="r data">262.0832</td>
+<td class="r data">4.34</td>
+<td class="r data">0.0372</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX39" aria-label="Criterion Panel">
+<h1 class="contentitem toc">Criterion Panel</h1>
+<div class="c">
+<img style="height: 480px; width: 640px" alt="Panel showing how selection criteria change with the selection step." src="data:image/png;base64,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"/>
+</div>
+</article>
+</section>
+</section>
+</span></div>
+</span></body>
+</html>
